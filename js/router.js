@@ -50,7 +50,7 @@ Router.prototype = {
     },
     goToRoute: function (htmlName, scriptName) {
         if(this.currentModule && this.currentModule.uninstall) {
-            this.currentModule.uninstall();
+            this.currentModule.uninstall(this.rootElem);
         }
         this.currentModule = undefined;
         (function(scope) { 
